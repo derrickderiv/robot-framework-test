@@ -30,7 +30,6 @@ Change to Demo Account
     Wait Until Page Contains Element    //div[@id='dt_VRTC6202199']    10
     Click Element    ${demo_vrtc_button}    
     Wait Until Page Contains Element    //div[@id='dt_core_account-info_acc-info']    20
-    
 Choose Volatility 10(1s) Index
     sleep    15s
     Click Element    ${dropdown_volatility}    
