@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220922 13:09:30.358" rpa="false" schemaversion="3">
+<suite id="s1" name="RF2" source="/home/derrick/Desktop/RF/RF2.robot">
+<test id="s1-t1" name="Login To Deriv" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://app.deriv.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 13:09:30.443" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/'.</msg>
+<status status="PASS" starttime="20220922 13:09:30.443" endtime="20220922 13:09:44.550"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 13:09:44.550" endtime="20220922 13:09:44.656"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220922 13:09:44.656" endtime="20220922 13:09:44.657"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='btn-purchase__text_wrapper' and contains(.,'Rise')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220922 13:09:44.657" endtime="20220922 13:09:57.884"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>dt_login_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 13:09:57.885" level="INFO">Clicking element 'dt_login_button'.</msg>
+<msg timestamp="20220922 13:10:01.206" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-79.png"&gt;&lt;img src="selenium-screenshot-79.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220922 13:10:01.208" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button id="dt_login_button" class="dc-btn dc-btn__effect dc-btn--tertiary acc-info__button" tabindex="0" type="submit"&gt;...&lt;/button&gt; is not clickable at point (1761, 23). Other element would receive the click: &lt;rect x="0" y="0" width="350" height="46" clip-path="url(#52pzn7wrqkt)" style="fill: url(&amp;quot;#dhjvlh6paut&amp;quot;);"&gt;&lt;/rect&gt;
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x5644834a8403 &lt;unknown&gt;
+#1 0x5644832ae778 &lt;unknown&gt;
+#2 0x5644832ed355 &lt;unknown&gt;
+#3 0x5644832eaee2 &lt;unknown&gt;
+#4 0x5644832e8584 &lt;unknown&gt;
+#5 0x5644832e71f5 &lt;unknown&gt;
+#6 0x5644832dae49 &lt;unknown&gt;
+#7 0x564483303a02 &lt;unknown&gt;
+#8 0x5644832da703 &lt;unknown&gt;
+#9 0x564483303b0e &lt;unknown&gt;
+#10 0x564483316c74 &lt;unknown&gt;
+#11 0x5644833038f3 &lt;unknown&gt;
+#12 0x5644832d90d8 &lt;unknown&gt;
+#13 0x5644832da205 &lt;unknown&gt;
+#14 0x5644834efe3d &lt;unknown&gt;
+#15 0x5644834f2db6 &lt;unknown&gt;
+#16 0x5644834d913e &lt;unknown&gt;
+#17 0x5644834f39b5 &lt;unknown&gt;
+#18 0x5644834cd970 &lt;unknown&gt;
+#19 0x564483510228 &lt;unknown&gt;
+#20 0x5644835103bf &lt;unknown&gt;
+#21 0x56448352aabe &lt;unknown&gt;
+#22 0x7fae166ee609 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20220922 13:09:57.884" endtime="20220922 13:10:01.211"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:01.211" endtime="20220922 13:10:01.212"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>derrick@besquare.com.my</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:01.212" endtime="20220922 13:10:01.212"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>Derrick123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:01.212" endtime="20220922 13:10:01.212"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:01.212" endtime="20220922 13:10:01.213"/>
+</kw>
+<status status="FAIL" starttime="20220922 13:09:30.442" endtime="20220922 13:10:01.214">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button id="dt_login_button" class="dc-btn dc-btn__effect dc-btn--tertiary acc-info__button" tabindex="0" type="submit"&gt;...&lt;/button&gt; is not clickable at point (1761, 23). Other element would receive the click: &lt;rect x="0" y="0" width="350" height="46" clip-path="url(#52pzn7wrqkt)" style="fill: url(&amp;quot;#dhjvlh6paut&amp;quot;);"&gt;&lt;/rect&gt;
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x5644834a8403 &lt;unknown&gt;
+#1 0x5644832ae778 &lt;unknown&gt;
+#2 0x5644832ed355 &lt;unknown&gt;
+#3 0x5644832eaee2 &lt;unknown&gt;
+#4 0x5644832e8584 &lt;unknown&gt;
+#5 0x5644832e71f5 &lt;unknown&gt;
+#6 0x5644832dae49 &lt;unknown&gt;
+#7 0x564483303a02 &lt;unknown&gt;
+#8 0x5644832da703 &lt;unknown&gt;
+#9 0x564483303b0e &lt;unknown&gt;
+#10 0x564483316c74 &lt;unknown&gt;
+#11 0x5644833038f3 &lt;unknown&gt;
+#12 0x5644832d90d8 &lt;unknown&gt;
+#13 0x5644832da205 &lt;unknown&gt;
+#14 0x5644834efe3d &lt;unknown&gt;
+#15 0x5644834f2db6 &lt;unknown&gt;
+#16 0x5644834d913e &lt;unknown&gt;
+#17 0x5644834f39b5 &lt;unknown&gt;
+#18 0x5644834cd970 &lt;unknown&gt;
+#19 0x564483510228 &lt;unknown&gt;
+#20 0x5644835103bf &lt;unknown&gt;
+#21 0x56448352aabe &lt;unknown&gt;
+#22 0x7fae166ee609 &lt;unknown&gt;
+</status>
+</test>
+<test id="s1-t2" name="Verify Real Account" line="23">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="dt_core_account-info_acc-info"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20220922 13:10:13.313" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-80.png"&gt;&lt;img src="selenium-screenshot-80.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220922 13:10:13.314" level="FAIL">Element '//*[@id="dt_core_account-info_acc-info"]' did not appear in 10 seconds.</msg>
+<status status="FAIL" starttime="20220922 13:10:01.217" endtime="20220922 13:10:13.314"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${core_account_info}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:13.315" endtime="20220922 13:10:13.315"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="dt_core_account-info_acc-info"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:13.316" endtime="20220922 13:10:13.316"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Add or manage account</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:13.316" endtime="20220922 13:10:13.317"/>
+</kw>
+<status status="FAIL" starttime="20220922 13:10:01.216" endtime="20220922 13:10:13.318">Element '//*[@id="dt_core_account-info_acc-info"]' did not appear in 10 seconds.</status>
+</test>
+<test id="s1-t3" name="Change to Demo Account" line="28">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${demo_acc_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 13:10:13.321" level="INFO">Clicking element '//*[@id="dt_core_account-switcher_demo-tab"]'.</msg>
+<msg timestamp="20220922 13:10:15.489" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-81.png"&gt;&lt;img src="selenium-screenshot-81.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220922 13:10:15.490" level="FAIL">Element with locator '//*[@id="dt_core_account-switcher_demo-tab"]' not found.</msg>
+<status status="FAIL" starttime="20220922 13:10:13.320" endtime="20220922 13:10:15.490"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@id='dt_VRTC6202199']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:15.491" endtime="20220922 13:10:15.491"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${demo_vrtc_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:15.491" endtime="20220922 13:10:15.491"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@id='dt_core_account-info_acc-info']</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:15.491" endtime="20220922 13:10:15.491"/>
+</kw>
+<status status="FAIL" starttime="20220922 13:10:13.319" endtime="20220922 13:10:15.491">Element with locator '//*[@id="dt_core_account-switcher_demo-tab"]' not found.</status>
+</test>
+<test id="s1-t4" name="Choose Volatility 10(1s) Index" line="34">
+<kw name="Sleep" library="BuiltIn">
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220922 13:10:30.492" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20220922 13:10:15.492" endtime="20220922 13:10:30.492"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdown_volatility}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 13:10:30.493" level="INFO">Clicking element '//div[@class="cq-symbol-select-btn"]'.</msg>
+<msg timestamp="20220922 13:10:32.667" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-82.png"&gt;&lt;img src="selenium-screenshot-82.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220922 13:10:32.668" level="FAIL">Element with locator '//div[@class="cq-symbol-select-btn"]' not found.</msg>
+<status status="FAIL" starttime="20220922 13:10:30.492" endtime="20220922 13:10:32.668"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Volatility 10 (1s) Index</arg>
+<arg>10</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.668" endtime="20220922 13:10:32.668"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='sc-mcd__item__name' and text()='Volatility 10 (1s) Index']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.668" endtime="20220922 13:10:32.668"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.668" endtime="20220922 13:10:32.669"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Volatility 10 (1s) Index</arg>
+<arg>10</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.669" endtime="20220922 13:10:32.669"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdown_contr_risefall}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.669" endtime="20220922 13:10:32.669"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="dt_contract_rise_fall_item"]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.669" endtime="20220922 13:10:32.669"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="dt_contract_rise_fall_item"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.669" endtime="20220922 13:10:32.669"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="dt_contract_dropdown"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.669" endtime="20220922 13:10:32.669"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="dc_t_toggle_item"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.669" endtime="20220922 13:10:32.670"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>//*[@id="dt_range_slider_label"]</arg>
+<arg>20</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.670" endtime="20220922 13:10:32.670"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@data-testid="tick_step_2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.670" endtime="20220922 13:10:32.670"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>2 Ticks</arg>
+<arg>10</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.670" endtime="20220922 13:10:32.670"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@data-testid="tick_step_3"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.670" endtime="20220922 13:10:32.670"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>3 Ticks</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.670" endtime="20220922 13:10:32.670"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@data-testid="tick_step_4"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.670" endtime="20220922 13:10:32.670"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>4 Ticks</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.670" endtime="20220922 13:10:32.670"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@data-testid="tick_step_5"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.670" endtime="20220922 13:10:32.670"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>5 Ticks</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.671" endtime="20220922 13:10:32.671"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="dc_stake_toggle_item"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.671" endtime="20220922 13:10:32.671"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="dt_amount_toggle"]/div/span</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 13:10:32.671" endtime="20220922 13:10:32.671"/>
+</kw>
+<status status="FAIL" starttime="20220922 13:10:15.491" endtime="20220922 13:10:32.672">Element with locator '//div[@class="cq-symbol-select-btn"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20220922 13:09:30.359" endtime="20220922 13:10:32.673"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="4" skip="0" id="s1" name="RF2">RF2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220922 06:53:20.904" rpa="false" schemaversion="3">
+<suite id="s1" name="RF" source="/home/derrick/Desktop/RF">
+<suite id="s1-s1" name="RF2" source="/home/derrick/Desktop/RF/RF2.robot">
+<test id="s1-s1-t1" name="Choose Volatility 10(1s) Index" line="32">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdown_volatility}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 06:53:21.019" level="INFO">Clicking element '//*[@id="ic-icon cq-symbol-dropdown"]'.</msg>
+<msg timestamp="20220922 06:53:21.020" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220922 06:53:21.021" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20220922 06:53:21.018" endtime="20220922 06:53:21.022"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='sc-mcd__item__name' and contains (.,'Volatility Index 10(1s) Index')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 06:53:21.022" endtime="20220922 06:53:21.023"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@id='sc-mcd__item__name']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 06:53:21.023" endtime="20220922 06:53:21.023"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>//div[@id='cq-menu-btn']</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220922 06:53:21.023" endtime="20220922 06:53:21.023"/>
+</kw>
+<status status="FAIL" starttime="20220922 06:53:21.017" endtime="20220922 06:53:21.024">No browser is open.</status>
+</test>
+<status status="FAIL" starttime="20220922 06:53:20.924" endtime="20220922 06:53:21.025"/>
+</suite>
+<status status="FAIL" starttime="20220922 06:53:20.906" endtime="20220922 06:53:21.026"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="RF">RF</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="RF2">RF.RF2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
