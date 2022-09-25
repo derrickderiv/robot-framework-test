@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220924 14:19:04.731" rpa="false" schemaversion="3">
+<suite id="s1" name="Setting" source="/home/derrick/Desktop/RF/Project 1/setting.robot">
+<test id="s1-t1" name="Login To Deriv" line="19">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://app.deriv.com/account/api-token/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220924 14:19:04.818" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/account/api-token/'.</msg>
+<status status="PASS" starttime="20220924 14:19:04.818" endtime="20220924 14:19:17.568"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220924 14:19:17.569" endtime="20220924 14:19:17.676"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220924 14:19:17.676" endtime="20220924 14:19:17.678"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20220924 14:19:29.759" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-57.png"&gt;&lt;img src="selenium-screenshot-57.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220924 14:19:29.760" level="FAIL">Element '//input[@type='email']' did not appear in 10 seconds.</msg>
+<status status="FAIL" starttime="20220924 14:19:17.678" endtime="20220924 14:19:29.763"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>derrick@besquare.com.my</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:29.764" endtime="20220924 14:19:29.764"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>Derrick123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:29.764" endtime="20220924 14:19:29.764"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:29.765" endtime="20220924 14:19:29.765"/>
+</kw>
+<status status="FAIL" starttime="20220924 14:19:04.817" endtime="20220924 14:19:29.766">Element '//input[@type='email']' did not appear in 10 seconds.</status>
+</test>
+<test id="s1-t2" name="Leaving Input Field Token Name Empty" line="30">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="app_contents"]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220924 14:19:29.769" endtime="20220924 14:19:30.790"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@name='token_name']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220924 14:19:32.931" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-58.png"&gt;&lt;img src="selenium-screenshot-58.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220924 14:19:32.931" level="FAIL">Element with locator '//*[@name='token_name']' not found.</msg>
+<status status="FAIL" starttime="20220924 14:19:30.790" endtime="20220924 14:19:32.934"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="app_contents"]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:32.935" endtime="20220924 14:19:32.935"/>
+</kw>
+<status status="FAIL" starttime="20220924 14:19:29.767" endtime="20220924 14:19:32.935">Element with locator '//*[@name='token_name']' not found.</status>
+</test>
+<test id="s1-t3" name="Clicking Checkbox" line="36">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@value='true']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 14:19:32.938" level="INFO">Clicking element '//*[@value='true']'.</msg>
+<msg timestamp="20220924 14:19:35.095" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-59.png"&gt;&lt;img src="selenium-screenshot-59.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220924 14:19:35.096" level="FAIL">Element with locator '//*[@value='true']' not found.</msg>
+<status status="FAIL" starttime="20220924 14:19:32.937" endtime="20220924 14:19:35.097"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[name()='path']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:35.098" endtime="20220924 14:19:35.098"/>
+</kw>
+<status status="FAIL" starttime="20220924 14:19:32.936" endtime="20220924 14:19:35.098">Element with locator '//*[@value='true']' not found.</status>
+</test>
+<test id="s1-t4" name="Leaving Input Field Token Name Empty" line="42">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${token_create_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 14:19:35.102" level="INFO">Clicking element '//button[@id='submit']'.</msg>
+<msg timestamp="20220924 14:19:37.256" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220924 14:19:37.256" level="FAIL">Element with locator '//button[@id='submit']' not found.</msg>
+<status status="FAIL" starttime="20220924 14:19:35.101" endtime="20220924 14:19:37.257"/>
+</kw>
+<status status="FAIL" starttime="20220924 14:19:35.100" endtime="20220924 14:19:37.258">Element with locator '//button[@id='submit']' not found.</status>
+</test>
+<test id="s1-t5" name="Input 50 For The Token Name" line="45">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='token_name']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 14:19:37.260" level="INFO">Clicking element '//button[@type='token_name']'.</msg>
+<msg timestamp="20220924 14:19:39.412" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-61.png"&gt;&lt;img src="selenium-screenshot-61.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220924 14:19:39.413" level="FAIL">Element with locator '//button[@type='token_name']' not found.</msg>
+<status status="FAIL" starttime="20220924 14:19:37.260" endtime="20220924 14:19:39.413"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='token_name']</arg>
+<arg>bcxfxv0m0jw1ygu5owykd5wjs7wr0kohqm75kdujridyyc6aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaapclchp0bvrjtkfeesm4vt1ezd3rgtsrwg217csnlg1pic4xa9q3s21adsbl2o4rq6p4lzxajf4i7r7vnhkfackfvsvo1mg6nek4wsw981xy6igus9mo7oup3wl3vhpryifc5ali272x11rvlayrm9fjgr4ozwrjzaiihwtqfiuiz4sjjoo4srdqcp6bn3x2swer2572nrz35pdfjmaayvvnha4202xl09uhkgfeqn187nz3e0h2vymy5mfbq4zzobec5n48fmctjwy4ad9fqdy8c7d06kwxukv6j7ro2yyozt7s92qt2k1k2glg9vwvvmawepn7ux6mtxu1az1vpnom0et4xt52y2z39qmnhl21b44f76cherp352bdkwqomyd1xbp6demtem6oullb0ivapczircsd0sqfzobbpm1uie180rrsg44635j9dbw30xupleozl756jmf1kgtx3nqv89br7o2i5fg9j32l9odeizpa3dqofu8wl4gt159zqrdobjdotyrsb9t05g8gqnwug7iczpgblwncjq4v8hg12mjvk95dhwg15a645dez00x5z05ev714n3r4vu3i2khkjxjldugdr7r8u0a8vi3xg3nqi7ufj24it8p34av4q9gvx2kh33qemc1na0sgb7ksxn59cml2otrryxmn943m1lsercdy5yzrgm6lkqtjcl2y6ab7jhid7lre8asjrsfacxux53178dx6m9ui43l3dtj3r08d6vdz7lbs9i93o2zok1wikm23g2yue9u2lxnyteyput8qqwx0atgrjrrmoemr01ypbkulw7o4fg51flthin89pormdrb7zds06fmsmw0ubobaq4kvi1xwq911icbjgals5dkt0tqi3ow5ah9w8x7iarmtedgesjlrcv8j3i8siv1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaapvjs6kysg4bgfka94dnyo0s6yht</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:39.414" endtime="20220924 14:19:39.414"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-field dc-field--error' and contains('Maximum 32 characters')]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:39.414" endtime="20220924 14:19:39.415"/>
+</kw>
+<status status="FAIL" starttime="20220924 14:19:37.259" endtime="20220924 14:19:39.415">Element with locator '//button[@type='token_name']' not found.</status>
+</test>
+<test id="s1-t6" name="Input Only 1 Character" line="50">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@text='token_name']</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220924 14:19:39.417" level="INFO">Typing text '1' into text field '//input[@text='token_name']'.</msg>
+<msg timestamp="20220924 14:19:41.588" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-62.png"&gt;&lt;img src="selenium-screenshot-62.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220924 14:19:41.588" level="FAIL">Element with locator '//input[@text='token_name']' not found.</msg>
+<status status="FAIL" starttime="20220924 14:19:39.417" endtime="20220924 14:19:41.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${token_create_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:41.590" endtime="20220924 14:19:41.590"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-field' and contains('Length of token name must be between 2 and 32 characters.')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:41.590" endtime="20220924 14:19:41.590"/>
+</kw>
+<status status="FAIL" starttime="20220924 14:19:39.416" endtime="20220924 14:19:41.591">Element with locator '//input[@text='token_name']' not found.</status>
+</test>
+<test id="s1-t7" name="Input Character Between 2 And 35" line="55">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@text='token_name']</arg>
+<arg>abcJ_1KOlm</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220924 14:19:41.595" level="INFO">Typing text 'abcJ_1KOlm' into text field '//input[@text='token_name']'.</msg>
+<msg timestamp="20220924 14:19:43.756" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-63.png"&gt;&lt;img src="selenium-screenshot-63.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220924 14:19:43.757" level="FAIL">Element with locator '//input[@text='token_name']' not found.</msg>
+<status status="FAIL" starttime="20220924 14:19:41.594" endtime="20220924 14:19:43.757"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${token_create_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:43.757" endtime="20220924 14:19:43.758"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-button' and text()='Create']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:43.758" endtime="20220924 14:19:43.758"/>
+</kw>
+<status status="FAIL" starttime="20220924 14:19:41.593" endtime="20220924 14:19:43.759">Element with locator '//input[@text='token_name']' not found.</status>
+</test>
+<test id="s1-t8" name="Copy Paste the Token ID" line="60">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@data-testid="dt_copy_token_icon"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220924 14:19:43.762" level="INFO">Clicking element '//*[@data-testid="dt_copy_token_icon"]'.</msg>
+<msg timestamp="20220924 14:19:45.909" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-64.png"&gt;&lt;img src="selenium-screenshot-64.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220924 14:19:45.910" level="FAIL">Element with locator '//*[@data-testid="dt_copy_token_icon"]' not found.</msg>
+<status status="FAIL" starttime="20220924 14:19:43.761" endtime="20220924 14:19:45.910"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@data-testid="dt_copy_token_icon" and text()='Token copied!']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220924 14:19:45.911" endtime="20220924 14:19:45.911"/>
+</kw>
+<status status="FAIL" starttime="20220924 14:19:43.760" endtime="20220924 14:19:45.911">Element with locator '//*[@data-testid="dt_copy_token_icon"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20220924 14:19:04.732" endtime="20220924 14:19:45.913"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="8" skip="0" id="s1" name="Setting">Setting</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220924 14:19:35.100" level="WARN">Multiple tests with name 'Leaving Input Field Token Name Empty' executed in suite 'Setting'.</msg>
+</errors>
+</robot>
